@@ -1,0 +1,64 @@
+Patrones elementales: ya me lo da el lenguaje. 
+arquitecturales : como estructuro yo mi proyecto.
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+Patrones de diseño,colecciones, TestUnitario, Tipos Genericos => Temas del final
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+diseñados con los mejores conceptos de programacion. Optimizados al maximo
+reutilizable y entendible. 
+
+Mejor solucion con las mejores practicas para la resolucion de problemas
+
+Patrones de diseño: me ayudaran aresolver un problema que tenga en el codigo.
+solo se dan en lenguajes oo. clases interfaces herencia polimorfismo si
+sin herencia / interfaces no se puede implemtentar patrones de diseño.
+
+PD: creacion, estructura, comportamiento(division academica).
+
+Que son? Como funcionan? como se puede implemtentar alguno?
+
+Como funcionan: 1) saber que existen (en total son 64 patrones)
+1993 c++, aplicable a cualquier lenguaje y programacion.
+
+
+Singleton: cuando queremos tener solo una instancia de cierta clase. Usar un solo objeto y que sea reutilizable (optimizacion de memoria).
+el patron nos va a decir que es lo que tenemos que hacer
+
+Punto de acceso unico.
+constructor privado, no se pueden crear objetos desde fuera
+/////////////////////////////////////////
+Clase ManejoPalabra
+{
+ static ManejoPalabra object;
+private ManejoPalabra()
+{}
+
+public static ManejoPalabra getInstance() desde el main obtener instancia
+{
+	if(object==null)
+	{
+	object = new ManejoPalabra();
+	}
+	
+	retunr object;
+
+}
+
+
+}
+//////////////////////////////////////
+
+Patron Factory: creame objeto de tipo x y la fabrica me devuelve el objeto correspondiente:
+
+Objetos distintos, misma naturaleza. 
+
+///////////////////////////////////////////////////////////////
+
+State: cuando tenemos un objeto que puede tener diferentes estados.
+
+Crear un clase llamada alumno que tenga nombre, apellido, legajo, carrear y estado
+Carrera y estado deben estar dados por un enumerado.
+Un alumno puede tener los siguientes estados: Ingreso, Regular, irregular, Recibido.
+Aplique el patrón State para proporcionar la siguiente máquina de estados
